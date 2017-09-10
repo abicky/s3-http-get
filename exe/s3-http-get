@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require "optparse"
+require "s3-http-get"
+
+options = {}
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options] URL"
+
+  opts.on("--profile PROFILE", "Use a specific profile from your credential file.") do |value|
+    options[:profile_name] = value
+  end
+end
+parser.parse!
+
+if ARGV.size != 1
+  puts parser.help
+  exit 1
+end
+
+res = S3HttpGet::Request.new(URI(ARGV[0]), options).execute
+puts res.body

@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "s3/http/get"
+require "s3-http-get"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

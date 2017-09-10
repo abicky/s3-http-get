@@ -1,8 +1,6 @@
-# S3::Http::Get
+# S3HttpGet
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/s3/http/get`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Get S3 objects using REST API
 
 ## Installation
 
@@ -22,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+$ s3-http-get -h
+Usage: s3-http-get [options] URL
+        --profile PROFILE            Use a specific profile from your credential file.
+```
 
 ## Development
 
@@ -32,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/s3-http-get.
+Bug reports and pull requests are welcome on GitHub at https://github.com/abicky/s3-http-get.
 
 ## License
 
